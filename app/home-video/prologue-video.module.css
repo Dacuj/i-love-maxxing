@@ -38,46 +38,10 @@
 .navigation a { text-decoration: none; }
 .navigation a:hover { color: #cfff00; }
 .navigation a:focus-visible { outline: 1px solid #cfff00; outline-offset: 4px; }
-.greenScreen {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
+.intertitle {
   scroll-margin-top: 38px;
   padding: clamp(12px, 2vw, 28px) 12px 0;
-  background: linear-gradient(#000, #050505);
-}
-.greenScreen::before,
-.screenReflection {
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-}
-.greenScreen::before {
-  inset: 0;
-  content: "";
-  background:
-    radial-gradient(ellipse 62% 68% at 19% 52%, #24302b 0%, #151c18 39%, transparent 89%);
-  mask-image: linear-gradient(transparent, #000 23%, #000 71%, transparent);
-}
-.screenReflection {
-  inset: -14% -16%;
-  background:
-    radial-gradient(ellipse 30% 17% at 60% 44%, #ddc5a629, transparent 74%),
-    radial-gradient(ellipse 44% 8% at 49% 60%, #abc5ba26, transparent 92%);
-  filter: blur(clamp(12px, 2vw, 32px));
-  mask-image: radial-gradient(ellipse 46% 34% at 50% 50%, #000 13%, transparent 90%);
-  transform: rotate(-14deg);
-}
-.screenGrain {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  mix-blend-mode: soft-light;
-  opacity: .10;
-  mask-image: radial-gradient(ellipse 73% 53% at 27% 52%, #000, transparent 91%);
+  background: #000;
 }
 .screenArtwork {
   display: block;
@@ -89,21 +53,8 @@
 .directoryContinuation:global(.directory-choice) {
   padding-top: clamp(15px, 3.8vh, 44px);
 }
-@media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    .screenReflection {
-      animation: glass-drift 1s linear both;
-      animation-timeline: view();
-      animation-range: cover 0% cover 100%;
-    }
-  }
-}
-@keyframes glass-drift {
-  from { transform: translate(-2%, 1%) rotate(-14deg); }
-  to { transform: translate(2%, -1%) rotate(-14deg); }
-}
 @media (max-width: 767px) {
-  .greenScreen {
+  .intertitle {
     padding-inline: 8px;
   }
 }

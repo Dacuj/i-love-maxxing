@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { ArticleList } from "../articles/article-list";
 import { napoliCollageCover } from "../products/product-data";
 import { PrologueVideo } from "./prologue-video";
-import { PhosphorGrain } from "./phosphor-grain";
 import styles from "./prologue-video.module.css";
 
 export const metadata: Metadata = {
@@ -25,9 +24,7 @@ export default function VideoHome() {
       <main>
         <PrologueVideo />
 
-        <section id="green-screen" className={styles.greenScreen} aria-label="Intertitle">
-          <PhosphorGrain className={styles.screenGrain} />
-          <div className={styles.screenReflection} aria-hidden="true" />
+        <section id="green-screen" className={styles.intertitle} aria-label="Intertitle">
           <img
             className={styles.screenArtwork}
             src="/landing/prologue-intertitle.png"
