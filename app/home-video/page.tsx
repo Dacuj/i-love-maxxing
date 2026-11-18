@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages, @next/next/no-img-element -- trial page preserves the existing home markup */
 import type { Metadata } from "next";
 import { ArticleList } from "../articles/article-list";
+import { napoliCollageCover } from "../products/product-data";
 import { PrologueVideo } from "./prologue-video";
 import { PhosphorGrain } from "./phosphor-grain";
 import styles from "./prologue-video.module.css";
@@ -67,7 +68,7 @@ export default function VideoHome() {
             </article>
             <article className="product">
               <a href="/products/i-hate-napoli-v2">
-                <img src="/collection-001/mockups/01-i-hate-napoli-red-on-blue-20261004.jpg" alt="I Hate Napoli blue T-shirt with red lettering on two lines" />
+                <img {...napoliCollageCover} />
                 <span><b>01 / V2</b> I HATE NAPOLI V2</span>
                 <span>THE SOUVENIR, INTERRUPTED /</span>
               </a>

@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { DEFAULT_TIMELINE } from "../timeline-data";
 import { ArticleList } from "../articles/article-list";
+import { napoliCollageCover } from "../products/product-data";
 import { TOUCH_GRASS_ASSETS, TOUCH_GRASS_ASSET_UPDATES } from "../touch-grass-assets";
 
 export default function Home() {
@@ -94,7 +95,7 @@ export default function Home() {
             </article>
             <article className="product">
               <a href="/products/i-hate-napoli-v2">
-                <img src="/collection-001/mockups/01-i-hate-napoli-red-on-blue-20261004.jpg" alt="I Hate Napoli blue T-shirt with red lettering on two lines" />
+                <img {...napoliCollageCover} />
                 <span><b>01 / V2</b> I HATE NAPOLI V2</span>
                 <span>THE SOUVENIR, INTERRUPTED /</span>
               </a>

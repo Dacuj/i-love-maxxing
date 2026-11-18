@@ -2,8 +2,15 @@
 import type { Product } from "./product-data";
 
 export default function ProductPage({ product }: { product: Product }) {
+  const cover = (
+    <figure className="product-main-figure">
+      <img src={product.mainImage} alt={product.mainAlt} fetchPriority={product.coverFirst ? "high" : undefined} />
+      <figcaption>{product.mainCaption ?? "CONCEPT MOCKUP / INTERNAL STUDY"}</figcaption>
+    </figure>
+  );
+
   return (
-    <main className="product-detail">
+    <main className={product.coverFirst ? "product-detail product-detail-cover-first" : "product-detail"}>
       <nav className="product-nav" aria-label="Product navigation">
         <a href="/">GAGAGAGAGAGAGA</a>
         <span className="product-nav-links">
@@ -11,6 +18,8 @@ export default function ProductPage({ product }: { product: Product }) {
           <a href="/shop">SHOP / COLLECTION</a>
         </span>
       </nav>
+
+      {product.coverFirst && cover}
 
       <header className="product-detail-head">
         <p>DROP 001 / {product.number}</p>
@@ -24,38 +33,25 @@ export default function ProductPage({ product }: { product: Product }) {
         </a>
       )}
 
-      <figure className="product-main-figure">
-        <img src={product.mainImage} alt={product.mainAlt} />
-        <figcaption>{product.mainCaption ?? "CONCEPT MOCKUP / INTERNAL STUDY"}</figcaption>
-      </figure>
+      {!product.coverFirst && cover}
 
-      <section className="product-language-grid" aria-label="Bilingual product description">
+      <section className="product-language-grid" aria-label="The idea behind the graphic / L’idea dietro la grafica">
         <article className="product-copy product-copy-it" lang="it">
-          <span>IT / IL PRODOTTO</span>
+          <span>IT / LA GRAFICA</span>
           <h2>{product.itHeading}</h2>
           <p>{product.itProduct}</p>
-          <span>IT / PERCHÉ ESISTE</span>
           <p>{product.itWhy}</p>
         </article>
 
         <article className="product-copy product-copy-en" lang="en">
-          <span>EN / THE PRODUCT</span>
+          <span>EN / THE GRAPHIC</span>
           <h2>{product.enHeading}</h2>
           <p>{product.enProduct}</p>
-          <span>EN / WHY IT EXISTS</span>
           <p>{product.enWhy}</p>
         </article>
       </section>
 
-      <dl className="product-specs">
-        <div><dt>GARMENT</dt><dd>{product.garment}</dd></div>
-        <div><dt>INK</dt><dd>{product.ink}</dd></div>
-        <div><dt>PROCESS</dt><dd>{product.print}</dd></div>
-        <div className="product-size"><dt>MISURE / SIZE</dt><dd>{product.printSize}<small className="product-size-note">Larghezza × altezza / Width × height<br />{product.printSizeNote}</small></dd></div>
-        <div><dt>STATUS</dt><dd>DESIGN CONFIRMED / PRODUCTION TEST PENDING</dd></div>
-      </dl>
-
-      <section className="product-gallery" aria-label="Product process gallery">
+      <section className="product-gallery" aria-label="Artwork and references">
         {product.gallery.map((image) => (
           <figure key={image.src}>
             <img src={image.src} alt={image.alt} />

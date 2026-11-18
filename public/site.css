@@ -666,6 +666,11 @@ a { color: inherit; }
   letter-spacing: -.085em;
 }
 .product-main-figure { margin: 0 0 12vh; }
+.product-detail-cover-first .product-main-figure { margin-bottom: 0; }
+.product-detail-cover-first .product-detail-head {
+  min-height: 0;
+  padding-top: clamp(42px, 8vw, 120px);
+}
 .product-main-figure img {
   display: block;
   width: 100%;
@@ -693,7 +698,6 @@ a { color: inherit; }
   font-size: 10px;
   letter-spacing: .12em;
 }
-.product-copy span:not(:first-child) { margin-top: 8vh; }
 .product-copy h2 {
   margin: 0 0 4vh;
   font-family: Georgia, "Times New Roman", serif;
@@ -707,6 +711,7 @@ a { color: inherit; }
   font-size: clamp(17px, 1.55vw, 25px);
   line-height: 1.22;
 }
+.product-copy p + p { margin-top: .8em; }
 .product-copy-it { color: #f5f1e8; }
 .product-copy-en { color: #ff3210; }
 .product-version-link {
@@ -723,26 +728,6 @@ a { color: inherit; }
 .product-version-link:hover,
 .product-version-link:focus-visible { color: #b8ff00; }
 
-.product-specs {
-  margin: 0 0 14vh;
-  border-top: 1px solid #444;
-}
-.product-specs div {
-  display: grid;
-  grid-template-columns: minmax(130px, .4fr) 1.6fr;
-  gap: 20px;
-  padding: 14px 0;
-  border-bottom: 1px solid #444;
-}
-.product-specs dt,
-.product-specs dd {
-  margin: 0;
-  font-size: 11px;
-  letter-spacing: .07em;
-}
-.product-specs dd { color: #ff3210; }
-.product-specs .product-size dt, .product-specs .product-size dd { font-size: 14px; }
-.product-size-note { display: block; margin-top: 8px; color: #b8b8b8; font-size: 14px; line-height: 1.5; font-weight: 400; text-transform: none; }
 .product-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1124,7 +1109,6 @@ a { color: inherit; }
   .product-language-grid { grid-template-columns: 1fr; gap: 10vh; }
   .product-copy h2 { font-size: clamp(38px, 12vw, 58px); }
   .product-copy p { font-size: 18px; }
-  .product-specs div { grid-template-columns: 95px 1fr; gap: 10px; }
   .product-gallery { grid-template-columns: 1fr; gap: 8vh; }
   .product-next { min-height: 46vh; }
   .product-next a { font-size: clamp(52px, 17vw, 88px); }
