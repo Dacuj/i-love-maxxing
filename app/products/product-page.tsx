@@ -41,6 +41,9 @@ export default function ProductPage({ product }: { product: Product }) {
           <h2>{product.itHeading}</h2>
           <p>{product.itProduct}</p>
           <p>{product.itWhy}</p>
+          {product.relatedArticle && (
+            <p><a href={product.relatedArticle.href}>Leggi l’articolo «{product.relatedArticle.title}»</a></p>
+          )}
         </article>
 
         <article className="product-copy product-copy-en" lang="en">
@@ -48,6 +51,9 @@ export default function ProductPage({ product }: { product: Product }) {
           <h2>{product.enHeading}</h2>
           <p>{product.enProduct}</p>
           <p>{product.enWhy}</p>
+          {product.relatedArticle && (
+            <p><a href={product.relatedArticle.href}>Read the article ‘{product.relatedArticle.title}’</a></p>
+          )}
         </article>
       </section>
 

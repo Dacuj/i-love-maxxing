@@ -11,6 +11,7 @@ export type Product = {
   mainCaption?: string;
   coverFirst?: boolean;
   compareWith?: { slug: string; title: string };
+  relatedArticle?: { href: string; title: string };
   garment: string;
   ink: string;
   print: string;
@@ -32,6 +33,11 @@ export const napoliCollageCover = {
   alt: "Cream I Hate Napoli shirt with blue star sleeves and a black postcard collage",
 };
 
+const napoliArticle = {
+  href: "/articles/jaccuse-jadore-napoli",
+  title: "J’accuse J’Adore Napoli",
+};
+
 export const products: Record<string, Product> = {
   "i-hate-napoli": {
     number: "01 / V1",
@@ -44,15 +50,16 @@ export const products: Record<string, Product> = {
     mainAlt: "Black I Hate Napoli T-shirt on a mannequin, with an ivory interlaced initial and irregular Gothic lettering",
     mainCaption: "AI MOCKUP / OFFICIAL DESIGN / NOT A PHYSICAL PROTOTYPE",
     compareWith: { slug: "i-hate-napoli-v2", title: "I HATE NAPOLI V2" },
+    relatedArticle: napoliArticle,
     garment: "BLACK / REGULAR FIT T-SHIRT",
     ink: "IVORY / ONE INK",
     print: "ONE-COLOUR SCREENPRINT",
-    itHeading: "Un souvenir che guasta il souvenir.",
-    itProduct: "Johnny Rotten aveva scritto «I HATE» a pennarello su una maglia dei Pink Floyd. Qui l’idea era fare la stessa cosa con Napoli, ma con una I enorme da libro antico. Le lettere sono uscite un po’ storte da Stable Diffusion e sono rimaste così.",
-    itWhy: "La cosa è che a Napoli ci appartieni pure quando ti fa incazzare. La maglia viene da lì, e dal fastidio per quella Napoli che sembra fatta apposta per il weekend di qualcun altro.",
-    enHeading: "A souvenir that spoils the souvenir.",
-    enProduct: "Johnny Rotten wrote ‘I HATE’ in marker on a Pink Floyd shirt. The idea was to do the same thing with Naples, with a huge I out of an old book. The letters came out a bit wonky in Stable Diffusion and stayed that way.",
-    enWhy: "You still belong to Naples when it pisses you off. That’s where the shirt came from, along with being tired of a Naples that seems made for somebody else’s weekend.",
+    itHeading: "Come sulla maglia dei Pink Floyd.",
+    itProduct: "Johnny Rotten scrisse «I HATE» a pennarello sulla maglia dei Pink Floyd. Qui riprendiamo quel gesto con Napoli.",
+    itWhy: "È una risposta a «J’Adore Napoli» e al modo in cui il marchio, anche attraverso gli artisti con cui collabora, racconta la città.",
+    enHeading: "Like on the Pink Floyd shirt.",
+    enProduct: "Johnny Rotten wrote ‘I HATE’ in marker on a Pink Floyd shirt. Here we’re doing the same thing with Naples.",
+    enWhy: "It’s a response to ‘J’Adore Napoli’ and the way the brand tells the story of the city, including through the artists it works with.",
     gallery: [
       { src: "/collection-001/mockups/01-i-hate-napoli-official-08-sd15-manichino.webp", alt: "AI mannequin mockup with the approved ivory I Hate Napoli interlaced design", label: "OFFICIAL DESIGN / AI MOCKUP" },
       { src: "/collection-001/designs/01-i-hate-napoli-official-08-monochrome.svg", alt: "Approved I Hate Napoli SD1.5 lettering with an interlaced initial and knotted frame, in one ink", label: "OFFICIAL ARTWORK / ONE INK" },
@@ -73,15 +80,16 @@ export const products: Record<string, Product> = {
     mainCaption: "POSTCARD COLLAGE / MOCKUP",
     coverFirst: true,
     compareWith: { slug: "i-hate-napoli", title: "I HATE NAPOLI V1" },
+    relatedArticle: napoliArticle,
     garment: "BLUE / CREW-NECK T-SHIRT",
     ink: "RED / ONE INK",
     print: "ONE-COLOUR SCREENPRINT",
     itHeading: "Una cartolina con «I HATE» sopra.",
-    itProduct: "La Madonna, i delfini, la città. Tutto fa subito Napoli, come una cartolina. Sopra c’è «I HATE», buttato lì come sulla maglia dei Pink Floyd di Johnny Rotten. Nella variante rossa su blu è rimasta solo la scritta, tutta legata come un logo.",
-    itWhy: "È una frecciata a «J’Adore Napoli» e all’idea che per sentirti parte della città ti basti metterti il suo marchio addosso. Poi la frecciata vale anche per questa maglia, che alla fine è un altro souvenir di Napoli.",
+    itProduct: "Johnny Rotten scrisse «I HATE» a pennarello sulla maglia dei Pink Floyd. Qui lo scriviamo sopra una cartolina di Napoli.",
+    itWhy: "È una risposta a «J’Adore Napoli» e al modo in cui il marchio, anche attraverso gli artisti con cui collabora, racconta la città.",
     enHeading: "A postcard with ‘I HATE’ written on it.",
-    enProduct: "The Madonna, the dolphins, the city. It all says Naples straight away, like a postcard. ‘I HATE’ is scrawled over it, like on Johnny Rotten’s Pink Floyd shirt. The red-on-blue version leaves just the words, joined up like a logo.",
-    enWhy: "It’s a dig at ‘J’Adore Napoli’ and the idea that you can feel part of the city by wearing its brand. The dig applies to this shirt too, which is another Naples souvenir in the end.",
+    enProduct: "Johnny Rotten wrote ‘I HATE’ in marker on a Pink Floyd shirt. Here we write it across a postcard from Naples.",
+    enWhy: "It’s a response to ‘J’Adore Napoli’ and the way the brand tells the story of the city, including through the artists it works with.",
     gallery: [
       { src: "/collection-001/designs/01-i-hate-napoli-v2-cartolina-artwork.png", alt: "Napoli collage with a crowned Madonna, dolphins and city architecture", label: "THE POSTCARD COLLAGE" },
       { src: "/collection-001/mockups/01-i-hate-napoli-red-on-blue-20261004.jpg", alt: "I Hate Napoli mockup with red lettering on a blue shirt", label: "LETTERING VARIANT / RED ON BLUE" },
@@ -104,12 +112,12 @@ export const products: Record<string, Product> = {
     garment: "RED / CREW-NECK T-SHIRT",
     ink: "GREEN / ONE INK",
     print: "SINGLE-COLOUR LETTERING / SCREENPRINT",
-    itHeading: "Al feed, con amore.",
-    itProduct: "Parte dalle magliette «I ♥ NY». Al posto della città c’è il feed e al posto del cuore c’è </3, quello spezzato che scrivi in chat. Il verde sul rosso viene dalle scritte del video.",
-    itWhy: "Sul feed trovi gente che parla come te, fa le tue stesse battute, ha i tuoi stessi problemi. A un certo punto sembra un posto a cui appartieni. In mezzo c’è un algoritmo che sta contando quanto ti fermi a guardare.",
-    enHeading: "To the feed, with love.",
-    enProduct: "It starts with the ‘I ♥ NY’ shirt. The city becomes the feed and the heart becomes </3, the broken one you type in a chat. The green on red comes from the words in the video.",
-    enWhy: "On the feed you find people who talk like you, make the same jokes and have the same problems. After a while it feels like somewhere you belong. In the middle of it all, an algorithm is counting how long you stop to look.",
+    itHeading: "Una maglietta da turista.",
+    itProduct: "Una presa in giro delle classiche magliette turistiche «I LOVE NY». Al posto della città c’è il feed, col cuore spezzato scritto come in chat.",
+    itWhy: "L’idea è ironizzare su quanto siamo attaccati ai nostri profili digitali e su quanto, a loro volta, influenzano quello che guardiamo e come ci vediamo.",
+    enHeading: "A tourist T-shirt.",
+    enProduct: "A take on the classic ‘I LOVE NY’ tourist shirts. The feed takes the city’s place, with the broken heart you’d type in a chat.",
+    enWhy: "It pokes fun at how attached we are to our digital profiles and how much they shape what we look at and how we see ourselves.",
     gallery: [
       { src: "/landing/i-love-my-feed-photo-v3.webp", alt: "Street model in sunglasses wearing the new red I </3 My Feed shirt", label: "NEW SHIRT / PHOTOGRAPHIC MOCKUP" },
       { src: "/landing/i-love-my-feed-noe.svg", alt: "Green serif I </3 MY FEED lettering on a red T-shirt", label: "NEW CONCEPT / GREEN ON RED" },
@@ -133,13 +141,15 @@ export const products: Record<string, Product> = {
     garment: "ORANGE / REGULAR FIT / REAL PROTOTYPE",
     ink: "CHARCOAL BLACK / ONE INK",
     print: "SD1.5 FAILED OCR + SCREENPRINT",
-    itHeading: "Scegli la tua divinità.",
-    itProduct: "L’idea era fare una specie di santino inventato. Ci sono una processione, delle capre e una ruota per scegliere. I riferimenti vengono dalle immagini del Sacro Cuore, dalle incisioni sui sabba e dagli affreschi di paese.",
-    itWhy: "Misticismo e tecnologia finiscono nello stesso menu. «Pick your deity» suona come una scelta da fare sul telefono. Fa un po’ ridere mettere l’algoritmo accanto ai santi, anche perché ogni giorno apriamo il feed per vedere cosa ha deciso di farci vedere.",
-    enHeading: "Pick your deity.",
-    enProduct: "The idea was to make a sort of made-up devotional card. There’s a procession, some goats and a wheel for choosing. The references are images of the Sacred Heart, prints of witches’ sabbaths and village frescoes.",
-    enWhy: "Mysticism and technology end up in the same menu. ‘Pick your deity’ sounds like a choice you make on your phone. Putting the algorithm next to the saints is funny, partly because we open our feeds every day to see what it’s decided to show us.",
+    itHeading: "Dio, i tarocchi o il nostro computer?",
+    itProduct: "Non sappiamo più a cosa affidarci quando dobbiamo credere. «Pick your deity» parte da lì, da questo incrocio tra misticismo e tecnologia.",
+    itWhy: "I riferimenti sono Mark Fisher con Realismo capitalista, per l’idea che il sistema in cui viviamo ci sembri l’unico possibile, e Valentina Tanni con Memestetica, per le immagini e i meme che ci passiamo in rete.",
+    enHeading: "God, tarot cards or our computer?",
+    enProduct: "We don’t know what to turn to anymore when we need something to believe in. ‘Pick your deity’ starts there, where mysticism and technology cross.",
+    enWhy: "The references are Mark Fisher’s Capitalist Realism, for the idea that the system we live in can seem like the only one possible, and Valentina Tanni’s Memestetica, for the images and memes we pass around online.",
     gallery: [
+      { src: "/collection-001/research-assets/t1-memestetica.jpg", alt: "Cover of Memestetica by Valentina Tanni", label: "VALENTINA TANNI / MEMESTETICA · NERO EDITIONS" },
+      { src: "/landing/realismo-capitalista-nero.jpg", alt: "Cover of the Italian edition of Realismo capitalista by Mark Fisher", label: "MARK FISHER / REALISMO CAPITALISTA · NERO EDITIONS" },
       { src: "/collection-001/mockups/07-witches-saints-algorithms-artwork.png", alt: "Witches Saints Algorithms artwork with two scenes around the lettering", label: "THE DEVOTIONAL CARD" },
       { src: "/collection-001/mockups/07-witches-saints-algorithms-process.png", alt: "Invented rural procession fresco from the upper part of the design", label: "THE PROCESSION" },
     ],
@@ -215,13 +225,14 @@ export const products: Record<string, Product> = {
     garment: "GREEN CREW-NECK / GREY LONG-SLEEVE LAYER",
     ink: "BLUE / ONE INK",
     print: "SCREENPRINT / ONE INK",
-    itHeading: "Pure la malinconia ha la sua nicchia.",
-    itProduct: "Lo spleen viene da Baudelaire, da Lo spleen di Parigi. Su una delle prime grafiche c’era proprio la sua faccia. Qui è rimasta la parola con «aholic» appiccicato alla fine, come se fosse una dipendenza da mettere in bio.",
-    itWhy: "La battuta è che pure quando ti annoi e non hai niente da dire puoi farci una nicchia su TikTok. Dai un nome alla cosa, trovi gli altri che stanno uguale e a un certo punto è diventata la tua personalità.",
-    enHeading: "Even melancholy has its own niche.",
-    enProduct: "The spleen comes from Baudelaire’s Paris Spleen. One of the early designs had his face right there. This one keeps the word with ‘aholic’ stuck on the end, like an addiction you’d put in your bio.",
-    enWhy: "The joke is that even when you’re bored and have nothing to say, you can make a TikTok niche out of it. Give it a name, find people who feel the same, and at some point it’s become your personality.",
+    itHeading: "Lo spleen ai tempi dei computer.",
+    itProduct: "Riprende la battuta di internet in cui appiccichi «-holic» a qualunque cosa, tipo «Cocacola-holic». Qui ci finisce lo spleen di Baudelaire.",
+    itWhy: "Quella specie di noia e malinconia torna attuale come non mai adesso che passiamo così tanto tempo davanti a un computer.",
+    enHeading: "Spleen in the age of computers.",
+    enProduct: "It borrows that internet joke where you stick ‘-holic’ on anything, like ‘Cocacola-holic’. Here it’s Baudelaire’s spleen.",
+    enWhy: "That mix of boredom and melancholy feels more familiar than ever now that we spend so much time in front of a computer.",
     gallery: [
+      { src: "/landing/cocacola-holic.jpg", alt: "Cocacola-holic meme showing someone drinking from a large bottle of cola", label: "COCACOLA-HOLIC / MEME" },
       { src: "/landing/spleen-aholic-photo.webp", alt: "Supplied street model holding pizza and wearing the new green Spleen Aholic shirt", label: "NEW SHIRT / PHOTOGRAPHIC MOCKUP" },
       { src: "/landing/spleen-aholic-noe.svg", alt: "New blue serif SPLEEN AHOLIC lettering on a green T-shirt", label: "NEW CONCEPT / BLUE ON GREEN" },
       { src: "/collection-001/mockups/09-spleen-aholic-mockup.png", alt: "Previous acid-lime Spleen Aholic shirt with Baudelaire artwork", label: "PREVIOUS VERSION / BAUDELAIRE" },
