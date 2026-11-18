@@ -43,7 +43,7 @@
   isolation: isolate;
   overflow: hidden;
   scroll-margin-top: 38px;
-  padding: clamp(52px, 8vh, 96px) 12px clamp(36px, 6vh, 72px);
+  padding: clamp(12px, 2vw, 28px) 12px 0;
   background: linear-gradient(#000, #050505);
 }
 .greenScreen::before,
@@ -79,48 +79,24 @@
   opacity: .10;
   mask-image: radial-gradient(ellipse 73% 53% at 27% 52%, #000, transparent 91%);
 }
-.screenQuote {
-  max-width: 43ch;
-  margin: 0;
-  color: #c5d3c9;
-  font: 700 clamp(16px, 2.55vw, 34px)/1.46 "Courier New", Courier, monospace;
-  letter-spacing: -.018em;
-  text-shadow:
-    .025em .016em .055em #d4ded0a8,
-    .11em .042em .095em #9eafa063,
-    .25em .085em .24em #a6b9ad51;
-  filter: blur(.021em);
-}
-.screenQuote p {
-  margin: 0;
-}
-.screenQuote p + p {
-  margin-top: .54em;
-}
-.screenQuote .screenQuestion {
-  margin-top: .55em;
-  color: #d9ded1;
+.screenArtwork {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin-inline: auto;
+  filter: brightness(0) invert(1);
 }
 .directoryContinuation:global(.directory-choice) {
   padding-top: clamp(15px, 3.8vh, 44px);
 }
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
-    .screenQuote {
-      animation: lens-settle 1s ease-out both;
-      animation-timeline: view();
-      animation-range: entry 4% entry 70%;
-    }
     .screenReflection {
       animation: glass-drift 1s linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
     }
   }
-}
-@keyframes lens-settle {
-  from { filter: blur(.09em); transform: translateX(-.10em); }
-  to { filter: blur(.021em); transform: translateX(0); }
 }
 @keyframes glass-drift {
   from { transform: translate(-2%, 1%) rotate(-14deg); }
@@ -129,9 +105,6 @@
 @media (max-width: 767px) {
   .greenScreen {
     padding-inline: 8px;
-  }
-  .screenQuote {
-    font-size: clamp(16px, 4.25vw, 24px);
   }
 }
 .handwrittenBridge {

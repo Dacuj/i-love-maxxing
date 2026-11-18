@@ -27,12 +27,14 @@ export default function VideoHome() {
         <section id="green-screen" className={styles.greenScreen} aria-label="Intertitle">
           <PhosphorGrain className={styles.screenGrain} />
           <div className={styles.screenReflection} aria-hidden="true" />
-          <blockquote className={styles.screenQuote} lang="en">
-            <p>He was stabbed in the throat. He died almost instantly.</p>
-            <p>Although I hadn’t seen him in more than ten years, I know I’ll miss him forever.</p>
-            <p>I never had any friends later on like the ones I had when I was twelve.</p>
-            <p className={styles.screenQuestion}>Jesus, does anyone?</p>
-          </blockquote>
+          <img
+            className={styles.screenArtwork}
+            src="/landing/prologue-intertitle.png"
+            alt=""
+            width={1182}
+            height={709}
+            decoding="async"
+          />
         </section>
 
         <section className={`directory-choice ${styles.directoryContinuation}`} aria-labelledby="directory-title">
