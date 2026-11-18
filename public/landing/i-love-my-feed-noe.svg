@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title">
+  <title id="title">Red T-shirt with green serif lettering reading I &lt;/3 MY FEED</title>
+  <rect width="1200" height="1200" fill="#0a0a0a"/>
+  <path d="M425 151 499 126 C510 181 554 208 600 208 S690 181 701 126 L775 151 1020 303 922 490 851 449 851 1068 349 1068 349 449 278 490 180 303Z" fill="#ea3323"/>
+  <path d="M499 126 C510 181 554 208 600 208 S690 181 701 126" fill="none" stroke="#0a0a0a" stroke-opacity=".28" stroke-width="9"/>
+  <path d="M349 449 349 1068 851 1068 851 449" fill="none" stroke="#0a0a0a" stroke-opacity=".14" stroke-width="5"/>
+  <g fill="#3e8941" font-family="Didot, 'Bodoni MT', 'Times New Roman', Georgia, serif" font-weight="400" text-anchor="middle">
+    <text x="600" y="583" font-size="59" letter-spacing="1.5">I &lt;/3 MY FEED</text>
+  </g>
+  <path d="M311 551 326 566 311 581 296 566Z M889 551 904 566 889 581 874 566Z" fill="#3e8941"/>
+</svg>

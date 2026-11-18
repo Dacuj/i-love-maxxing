@@ -1,0 +1,11 @@
+/node_modules
+/.pages-work/
+/dist/
+/.vinext/
+/.next/
+/coverage/
+.env*
+.DS_Store
+*.pem
+*.tsbuildinfo
+npm-debug.log*

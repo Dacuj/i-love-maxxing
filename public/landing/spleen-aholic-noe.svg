@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title">
+  <title id="title">Green T-shirt with blue serif lettering reading SPLEEN AHOLIC</title>
+  <rect width="1200" height="1200" fill="#0a0a0a"/>
+  <path d="M425 151 499 126 C510 181 554 208 600 208 S690 181 701 126 L775 151 1020 303 922 490 851 449 851 1068 349 1068 349 449 278 490 180 303Z" fill="#479e2d"/>
+  <path d="M499 126 C510 181 554 208 600 208 S690 181 701 126" fill="none" stroke="#0a0a0a" stroke-opacity=".28" stroke-width="9"/>
+  <path d="M349 449 349 1068 851 1068 851 449" fill="none" stroke="#0a0a0a" stroke-opacity=".14" stroke-width="5"/>
+  <g fill="#0000e8" font-family="Didot, 'Bodoni MT', 'Times New Roman', Georgia, serif" font-weight="400" text-anchor="middle">
+    <text x="600" y="528" font-size="100" letter-spacing="9">SPLEEN</text>
+    <text x="600" y="643" font-size="100" letter-spacing="9">AHOLIC</text>
+  </g>
+  <path d="M311 551 326 566 311 581 296 566Z M889 551 904 566 889 581 874 566Z" fill="#0000e8"/>
+</svg>
