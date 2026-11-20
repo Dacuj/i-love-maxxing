@@ -58,28 +58,36 @@ export default function VideoHome() {
           <div className="products">
             <article className="product">
               <a href="/products/witches-saints-algorithms">
-                <img src="/collection-001/mockups/07-witches-saints-algorithms-real.png" alt="Witches Saints Algorithms orange T-shirt worn by a model" />
+                <figure className={styles.polaroid}>
+                  <img src="/collection-001/mockups/07-witches-saints-algorithms-real.png" alt="Witches Saints Algorithms orange T-shirt worn by a model" />
+                </figure>
                 <span><b>07</b> WITCHES SAINTS ALGORITHMS</span>
                 <span>PICK YOUR DEITY /</span>
               </a>
             </article>
             <article className="product">
               <a href="/products/i-hate-napoli-v2">
-                <img {...napoliCollageCover} />
+                <figure className={`${styles.polaroid} ${styles.polaroidPortrait}`}>
+                  <img {...napoliCollageCover} />
+                </figure>
                 <span><b>01 / V2</b> I HATE NAPOLI V2</span>
                 <span>THE SOUVENIR, INTERRUPTED /</span>
               </a>
             </article>
             <article className="product">
               <a href="/products/i-love-my-feed">
-                <img src="/landing/i-love-my-feed-photo-v3.webp" alt="Street model in sunglasses wearing a red T-shirt with green I &lt;/3 MY FEED serif lettering on one line" />
+                <figure className={`${styles.polaroid} ${styles.polaroidPortrait}`}>
+                  <img src="/landing/i-love-my-feed-photo-v3.webp" alt="Street model in sunglasses wearing a red T-shirt with green I &lt;/3 MY FEED serif lettering on one line" />
+                </figure>
                 <span><b>02</b> I LOVE MY FEED</span>
                 <span>THE FEED AS LOVER /</span>
               </a>
             </article>
             <article className="product">
               <a href="/products/spleen-aholic">
-                <img src="/landing/spleen-aholic-photo.webp" alt="Street model holding pizza and wearing a green T-shirt with blue SPLEEN AHOLIC serif lettering" />
+                <figure className={styles.polaroid}>
+                  <img src="/landing/spleen-aholic-photo.webp" alt="Street model holding pizza and wearing a green T-shirt with blue SPLEEN AHOLIC serif lettering" />
+                </figure>
                 <span><b>09</b> SPLEEN AHOLIC</span>
                 <span>MELANCHOLY AS A HABIT /</span>
               </a>
